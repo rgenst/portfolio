@@ -12,34 +12,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #f7fafb;
+        --bg: #ffffff;
         --surface: #ffffff;
-        --surface-2: #eef5f6;
-        --ink: #123038;
-        --ink-soft: #47636c;
-        --line: #dce9eb;
-        --teal: #0b6e7e;
-        --teal-deep: #084e5c;
-        --teal-soft: #d9eef1;
-        --mint: #2bb3a3;
+        --surface-2: #e8f5fb;
+        --navy: #0a2540;
+        --navy-deep: #071a30;
+        --ink: #0a2540;
+        --ink-soft: #47637d;
+        --line: #d7e9f2;
+        --teal: #0086c9;
+        --teal-deep: #0072ac;
+        --teal-soft: #dff3fb;
+        --aqua-bright: #45c8f5;
+        --on-navy: #c9e2f0;
+        --on-navy-soft: #9dbfd6;
+        --mint: #0086c9;
         --amber: #f2a93b;
-        --wa: #1faa55;
-        --wa-deep: #15803d;
-        --shadow: 0 18px 40px -18px rgba(8, 78, 92, .28);
+        --wa: #0086c9;
+        --wa-deep: #006da3;
+        --shadow: 0 18px 40px -18px rgba(10, 37, 64, .30);
         --radius: 20px;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #0b1a1f;
-          --surface: #12262d;
-          --surface-2: #17333c;
-          --ink: #eaf4f6;
-          --ink-soft: #a7c2c9;
-          --line: #24444d;
-          --teal: #3db8cc;
-          --teal-deep: #8fd8e4;
-          --teal-soft: #173a42;
-          --mint: #3ec9b8;
+          --bg: #081f38;
+          --surface: #0d2c4c;
+          --surface-2: #103453;
+          --navy: #04101f;
+          --navy-deep: #030b16;
+          --ink: #eef7fb;
+          --ink-soft: #a9c6d8;
+          --line: #1d4568;
+          --teal: #38bdf8;
+          --teal-deep: #7dd3fc;
+          --teal-soft: #123a5c;
+          --aqua-bright: #45c8f5;
+          --on-navy: #c9e2f0;
+          --on-navy-soft: #9dbfd6;
+          --mint: #38bdf8;
           --shadow: 0 18px 40px -18px rgba(0, 0, 0, .6);
         }
       }
@@ -88,14 +98,14 @@
         transition: transform .15s ease, background .15s ease;
       }
       .btn:active { transform: scale(.98); }
-      .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 12px 24px -10px rgba(21, 128, 61, .55); }
+      .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 12px 24px -10px rgba(0, 119, 182, .55); }
       .btn-wa:hover { background: var(--wa-deep); }
       .btn-ghost { background: var(--surface); color: var(--teal-deep); border: 1.5px solid var(--line); }
       .btn-ghost:hover { border-color: var(--teal); }
       .btn svg { flex: none; }
 
       /* ---------- Hero ---------- */
-      .hero { padding: 44px 0 56px; }
+      .hero { padding: 44px 0 56px; background: var(--navy); color: #fff; }
       .hero-grid { display: grid; gap: 34px; }
       @media (min-width: 920px) {
         .hero { padding: 64px 0 80px; }
@@ -126,6 +136,12 @@
       .hero-card .dot { width: 42px; height: 42px; border-radius: 50%; background: var(--teal-soft); display: grid; place-items: center; flex: none; color: var(--teal); }
       .hero-card b { display: block; font-size: .95rem; }
       .hero-card span { font-size: .85rem; color: var(--ink-soft); }
+      .hero-badge { background: rgba(69, 200, 245, .16); color: var(--aqua-bright); }
+      .hero h1 .accent { color: var(--aqua-bright); }
+      .hero-sub { color: var(--on-navy); }
+      .hero-note { color: var(--on-navy); }
+      .hero .stat b { color: #fff; }
+      .hero .stat span { color: var(--on-navy-soft); }
 
       /* ---------- Sections ---------- */
       section { padding: 56px 0; }
@@ -133,6 +149,12 @@
       .section-head h2 { font-size: clamp(1.6rem, 4.6vw, 2.3rem); font-weight: 700; }
       .section-head p { margin-top: 10px; color: var(--ink-soft); font-size: 1.02rem; }
       .alt { background: var(--surface-2); }
+      #services { background: var(--bg); }
+      #why { background: var(--surface-2); }
+      #dentist { background: var(--navy); }
+      main > section:last-of-type { background: var(--navy); color: #fff; padding: 56px 0 !important; }
+      main > section:last-of-type h2 { color: #fff; }
+      main > section:last-of-type p { color: var(--on-navy) !important; }
 
       /* ---------- Services ---------- */
       .svc-grid { display: grid; gap: 16px; }
@@ -204,22 +226,21 @@
       .rev-summary { display: flex; align-items: center; gap: 10px; margin-top: 22px; font-weight: 700; color: var(--ink-soft); font-size: .95rem; flex-wrap: wrap; }
 
       /* ---------- Booking ---------- */
-      .book-band { background: var(--teal-deep); border-radius: 26px; padding: 36px 24px; color: #eaf6f8; }
-      @media (prefers-color-scheme: dark) { .book-band { background: #0e323c; } }
+      .book-band { background: var(--navy); border-radius: 26px; padding: 36px 24px; color: #e8f4fa; }
       @media (min-width: 820px) { .book-band { padding: 48px; } }
       .book-grid { display: grid; gap: 30px; }
       @media (min-width: 920px) { .book-grid { grid-template-columns: 1fr 1fr; gap: 48px; } }
       .book-band h2 { color: #fff; font-size: clamp(1.6rem, 4.6vw, 2.2rem); }
-      .book-band .lead { margin-top: 12px; color: #c4e2e8; }
+      .book-band .lead { margin-top: 12px; color: var(--on-navy); }
       .steps { display: grid; gap: 16px; margin-top: 24px; }
       .step { display: flex; gap: 13px; align-items: flex-start; }
       .step n {
         width: 30px; height: 30px; border-radius: 50%; flex: none;
-        background: var(--mint); color: #06333a; font-family: "Sora", sans-serif; font-weight: 800;
+        background: var(--aqua-bright); color: #0a2540; font-family: "Sora", sans-serif; font-weight: 800;
         display: grid; place-items: center; font-size: .95rem; font-style: normal;
       }
       .step b { display: block; color: #fff; }
-      .step span { color: #c4e2e8; font-size: .94rem; }
+      .step span { color: var(--on-navy); font-size: .94rem; }
       .book-form { background: var(--surface); border-radius: 20px; padding: 24px; color: var(--ink); }
       .book-form h3 { font-size: 1.1rem; margin-bottom: 16px; }
       .field { margin-bottom: 14px; }
