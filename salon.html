@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Lumière Beauty Studio — a beauty salon and spa in downtown Ottawa: facials, hair styling and massage. Clear USD pricing, no upsell. Book in one tap on WhatsApp." />
+    <meta name="description" content="Lumière Beauty Studio — a beauty salon and spa in downtown Ottawa: facials, hair styling and massage. Clear USD pricing, no upsell. Book in one tap by phone." />
     <link rel="icon" href="data:," />
     <title>Lumière Beauty Studio · Facials, Hair &amp; Massage — Ottawa</title>
     <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
@@ -37,8 +37,8 @@
         --rose:#e0447c;
         --plum:#3a0f2c;          /* deep plum / berry */
         --plum-2:#571c45;
-        --wa:#1faa55;
-        --wa-deep:#178a43;
+        --wa:#3a0f2c;
+        --wa-deep:#2a0a20;
         --gold:#bd8a1f;          /* warm gold accent */
         --shadow:0 18px 40px rgba(58,15,44,.15);
         --shadow-sm:0 6px 18px rgba(58,15,44,.10);
@@ -294,10 +294,10 @@
         color:#d9aec4;font-size:.82rem;background:rgba(255,255,255,.06);
       }
 
-      /* floating whatsapp + mobile bar */
+      /* floating call button + mobile bar */
       .wa-float{
         position:fixed;right:1rem;bottom:5.4rem;z-index:60;width:3.6rem;height:3.6rem;border-radius:50%;
-        background:var(--wa);display:none;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(23,138,67,.4);
+        background:var(--wa);display:none;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(58,15,44,.4);
       }
       @media (min-width:820px){ .wa-float{display:flex;bottom:1.2rem} }
       .wa-float svg{width:1.8rem;height:1.8rem;fill:#fff}
@@ -318,7 +318,7 @@
       .sec-head .lat::before{content:"";width:2rem;height:1px;background:var(--accent);flex:none}
       .btn{transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
       .btn:hover{transform:translateY(-1px)}
-      .btn-wa:hover{box-shadow:0 12px 24px rgba(23,138,67,.35)}
+      .btn-wa:hover{box-shadow:0 12px 24px rgba(58,15,44,.35)}
       .btn-main:hover{box-shadow:0 12px 24px rgba(194,24,91,.32)}
       .card{transition:transform .35s ease,box-shadow .35s ease}
       .card:hover{transform:translateY(-5px);box-shadow:0 26px 48px rgba(58,15,44,.22)}
@@ -415,10 +415,10 @@
         .card:hover .imgwrap::after{transform:translateX(130%) skewX(-10deg)}
         .gallery figure::after{transition:transform 1.1s ease}
         .gallery figure:hover::after{transform:translateX(130%) skewX(-10deg)}
-        /* soft breathing ring around the floating WhatsApp button */
+        /* soft breathing ring around the floating call button */
         .wa-float::after{
           content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
-          border:2px solid rgba(31,170,85,.5);animation:waRing 4s ease-out infinite;
+          border:2px solid rgba(58,15,44,.5);animation:waRing 4s ease-out infinite;
         }
         @keyframes waRing{from{transform:scale(1);opacity:.65}to{transform:scale(1.38);opacity:0}}
       }
@@ -438,7 +438,7 @@
           <a href="#reviews">Reviews</a>
           <a href="#visit">Location &amp; Hours</a>
         </nav>
-        <a class="btn btn-wa btn-sm" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn-wa btn-sm" href="tel:+16135550147">Call to book</a>
       </div>
     </header>
 
@@ -453,8 +453,8 @@
           <h1>Walk in tired.<br />Walk out <em>glowing</em>.</h1>
           <p class="lead">Lumière is a full-service beauty studio on Bank Street — results-driven facials, hair by senior stylists, and massage that genuinely unwinds you. Clear prices, honest advice, and zero pressure to buy a package.</p>
           <div class="hero-cta">
-            <a class="btn btn-wa" href="https://wa.me/601137535820" target="_blank" rel="noopener">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2m0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.97-.14.17-.29.19-.54.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.81-1.19.35-.6.35-1.1.24-1.21-.1-.11-.23-.17-.48-.3"/></svg>
+            <a class="btn btn-wa" href="tel:+16135550147">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
               Book your first facial — $85
             </a>
             <a class="btn btn-ghost" href="#prices">See services &amp; prices</a>
@@ -483,7 +483,7 @@
                 <h3>Hydra-Drench Facial</h3>
                 <p>Deep cleansing, a hyaluronic infusion and a cooling finish — built for skin dried out by winter air, heated offices and long days. You leave visibly brighter, and makeup goes on like a dream.</p>
                 <div class="price-row"><span class="price">$85 <small>/ first visit</small></span><span class="was">Reg. $110</span></div>
-                <a class="btn btn-main" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book this facial</a>
+                <a class="btn btn-main" href="tel:+16135550147">Book this facial</a>
               </div>
             </article>
             <article class="card reveal d2">
@@ -493,7 +493,7 @@
                 <h3>Hot Stone Massage</h3>
                 <p>Warm basalt stones and slow Swedish strokes melt tension from your shoulders down to your lower back. If you sit at a desk all day or carry stress in your neck, expect your best sleep in weeks.</p>
                 <div class="price-row"><span class="price">$115 <small>/ 90 minutes</small></span></div>
-                <a class="btn btn-main" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book this massage</a>
+                <a class="btn btn-main" href="tel:+16135550147">Book this massage</a>
               </div>
             </article>
             <article class="card reveal d3">
@@ -503,7 +503,7 @@
                 <h3>Cut, Wash &amp; Blowout</h3>
                 <p>Your stylist talks through your face shape, hair type and morning routine before picking up the scissors — then shows you how to recreate the finish at home. No cut you'll regret by Friday.</p>
                 <div class="price-row"><span class="price">$65 <small>/ senior stylist</small></span></div>
-                <a class="btn btn-main" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book this service</a>
+                <a class="btn btn-main" href="tel:+16135550147">Book this service</a>
               </div>
             </article>
           </div>
@@ -518,7 +518,7 @@
               <h3>New to Lumière? Your first facial is $85</h3>
               <p>The Hydra-Drench Facial, regularly $110, with a free skin analysis included. New clients only — one per person, every month.</p>
             </div>
-            <a class="btn" href="https://wa.me/601137535820" target="_blank" rel="noopener">Claim it on WhatsApp</a>
+            <a class="btn" href="tel:+16135550147">Call to Claim</a>
           </div>
         </div>
       </section>
@@ -529,7 +529,7 @@
           <div class="sec-head reveal">
             <div class="lat">Price List</div>
             <h2>Full Price List</h2>
-            <p>Browse by category, then tap "Book" on anything you'd like — it opens a WhatsApp chat with us. Just tell us the service and a time that works for you.</p>
+            <p>Browse by category, then tap "Book" on anything you'd like — it calls us directly. Just tell us the service and a time that works for you.</p>
           </div>
           <div class="tabs reveal" role="group" aria-label="Price list categories">
             <button class="tab" type="button" data-cat="all" aria-pressed="true">All</button>
@@ -541,92 +541,92 @@
             <div class="prow" data-cat="face">
               <span class="nm">Signature Glow Facial<small>75 minutes</small></span>
               <span class="dots"></span><span class="pr">$95</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="face">
               <span class="nm">Hydra-Drench Facial<small>75 minutes · first-visit price, reg. $110</small></span>
               <span class="dots"></span><span class="pr">$85</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="face">
               <span class="nm">Deep Cleanse Facial<small>60 minutes</small></span>
               <span class="dots"></span><span class="pr">$75</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="face">
               <span class="nm">Anti-Aging Firming Facial<small>90 minutes</small></span>
               <span class="dots"></span><span class="pr">$135</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="face">
               <span class="nm">Sensitive Skin Repair Facial<small>60 minutes</small></span>
               <span class="dots"></span><span class="pr">$85</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="face">
               <span class="nm">Express Glow Facial<small>30 minutes · lunch-break friendly</small></span>
               <span class="dots"></span><span class="pr">$49</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Cut, Wash &amp; Blowout<small>About 60 minutes</small></span>
               <span class="dots"></span><span class="pr">From $65</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Blowout &amp; Finish<small>45 minutes</small></span>
               <span class="dots"></span><span class="pr">$45</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Single-Process Color<small>Roots or all-over</small></span>
               <span class="dots"></span><span class="pr">From $85</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Full Color<small>Priced by hair length</small></span>
               <span class="dots"></span><span class="pr">From $120</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Balayage &amp; Highlights<small>Includes toner &amp; finish</small></span>
               <span class="dots"></span><span class="pr">From $165</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="hair">
               <span class="nm">Keratin Repair Treatment<small>60 minutes</small></span>
               <span class="dots"></span><span class="pr">$75</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Swedish Relaxation Massage<small>60 minutes</small></span>
               <span class="dots"></span><span class="pr">$85</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Hot Stone Massage<small>90 minutes</small></span>
               <span class="dots"></span><span class="pr">$115</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Deep Tissue Massage<small>60 minutes</small></span>
               <span class="dots"></span><span class="pr">$95</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Aromatherapy Massage<small>75 minutes</small></span>
               <span class="dots"></span><span class="pr">$105</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Back, Neck &amp; Shoulders<small>30 minutes</small></span>
               <span class="dots"></span><span class="pr">$50</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
             <div class="prow" data-cat="body">
               <span class="nm">Body Polish &amp; Wrap<small>90 minutes</small></span>
               <span class="dots"></span><span class="pr">$125</span>
-              <a class="book" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book</a>
+              <a class="book" href="tel:+16135550147">Book</a>
             </div>
           </div>
           <p class="plist-note">* Services marked "from" are quoted in the studio based on hair length or condition, and always confirmed with you before we start. If the price doesn't work for you, there's no obligation to go ahead.</p>
@@ -643,7 +643,7 @@
           <div class="steps reveal">
             <div class="step">
               <div class="num">01</div>
-              <h3>Message us on WhatsApp</h3>
+              <h3>Call us</h3>
               <p>Tap any Book button, tell us what you'd like and a time that suits you — we'll confirm your spot the same day.</p>
             </div>
             <div class="step">
@@ -727,7 +727,7 @@
           <div class="faq reveal">
             <details>
               <summary>Do I need an appointment, or can I walk in?</summary>
-              <div class="ans"><p>Walk-ins are welcome for hair and express services, but evenings and Saturdays book up fast. We recommend messaging us on WhatsApp to lock in your time. Running late or need to reschedule? Let us know 3 hours ahead — no charge, no fuss.</p></div>
+              <div class="ans"><p>Walk-ins are welcome for hair and express services, but evenings and Saturdays book up fast. We recommend calling us to lock in your time. Running late or need to reschedule? Let us know 3 hours ahead — no charge, no fuss.</p></div>
             </details>
             <details>
               <summary>It's my first visit — will I be pressured to buy a package?</summary>
@@ -743,7 +743,7 @@
             </details>
             <details>
               <summary>What payment methods do you accept?</summary>
-              <div class="ans"><p>Visa, Mastercard, Amex, Interac, Apple Pay and cash are all welcome. Gift cards are available in the studio and by WhatsApp — a favorite for birthdays and Mother's Day.</p></div>
+              <div class="ans"><p>Visa, Mastercard, Amex, Interac, Apple Pay and cash are all welcome. Gift cards are available in the studio and by phone — a favorite for birthdays and Mother's Day.</p></div>
             </details>
           </div>
         </div>
@@ -771,7 +771,7 @@
               </div>
             </div>
             <div class="cta-col">
-              <a class="btn btn-wa" href="https://wa.me/601137535820" target="_blank" rel="noopener">Book on WhatsApp</a>
+              <a class="btn btn-wa" href="tel:+16135550147">Call to book</a>
               <a class="btn btn-main" href="https://www.google.com/maps/search/?api=1&amp;query=214+Bank+Street,+Ottawa,+ON" target="_blank" rel="noopener">Get directions on Google Maps</a>
               <a class="btn btn-ghost" href="#prices">See services &amp; prices</a>
               <div class="vcard" style="box-shadow:none">
@@ -798,23 +798,22 @@
           <a href="#visit">Location &amp; Hours</a>
         </nav>
       </div>
-      <div class="demo-note">About this demo: this page is a portfolio sample for the one-page business website service ($199, built overnight). The studio name, address, prices and reviews shown are sample content. Want a page like this — your business name, your services, your WhatsApp? Message us on WhatsApp and it can be live tomorrow.</div>
+      <div class="demo-note">About this demo: this page is a portfolio sample for the one-page business website service ($199, built overnight). The studio name, address, prices and reviews shown are sample content. Want a page like this — your business name, your services, your phone number? Email us and it can be live tomorrow.</div>
     </footer>
 
-    <!-- floating WhatsApp (desktop) -->
-    <a class="wa-float" href="https://wa.me/601137535820" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2m0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.97-.14.17-.29.19-.54.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.81-1.19.35-.6.35-1.1.24-1.21-.1-.11-.23-.17-.48-.3"/></svg>
+    <!-- floating call button (desktop) -->
+    <a class="wa-float" href="tel:+16135550147" aria-label="Call to book">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
     </a>
 
     <!-- mobile action bar -->
     <div class="mbar">
-      <a href="https://wa.me/601137535820" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2m4.52 12.87c-.25-.13-1.47-.72-1.69-.81-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.97-.14.17-.29.19-.54.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.81-1.19.35-.6.35-1.1.24-1.21-.1-.11-.23-.17-.48-.3"/></svg>
-        Chat
-      </a>
-      <a class="wa" href="https://wa.me/601137535820" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2m4.52 12.87c-.25-.13-1.47-.72-1.69-.81-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.97-.14.17-.29.19-.54.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.6 1.81-1.19.35-.6.35-1.1.24-1.21-.1-.11-.23-.17-.48-.3"/></svg>
-        Book on WhatsApp
+      <a href="tel:+16135550147">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call</a>
+      <a class="wa" href="tel:+16135550147">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call to book
       </a>
       <a href="https://www.google.com/maps/search/?api=1&amp;query=214+Bank+Street,+Ottawa,+ON" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
